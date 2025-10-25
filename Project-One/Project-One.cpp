@@ -226,6 +226,13 @@ char DoYouWantToPlayAgain()
 	return UserInput;
 }
 
+void PrintHeader()
+{
+	cout << "_______________________________________________________________\n" << endl;
+	cout << "________ +++ Welcome To Rock, Paper, Scissors Game ! +++ ______" << endl << endl;
+	cout << "_______________________ [Game Starts] ________________________\n" << endl;
+}
+
 void ResetScreen()
 {
 	char Again = DoYouWantToPlayAgain();
@@ -234,6 +241,7 @@ void ResetScreen()
 	{
 		system("cls");
 		system("color 07");
+		PrintHeader();
 		ProccessTheChoises(RoundsNumber());
 		Again = DoYouWantToPlayAgain();
 	}
@@ -244,7 +252,7 @@ void ResetScreen()
 void StartGame()
 {
 	int Times;
-
+	PrintHeader();
 	do
 	{
 		Times = RoundsNumber();
